@@ -1,0 +1,30 @@
+.form-content {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 8px;
+}
+
+.transaction {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+.transaction-details1 {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+.transaction-details2 {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+}
+
+.addBtn {
+    position: absolute;
+    top: 120px;
+    right: 60px;
+    padding: 20px 25px;
+}

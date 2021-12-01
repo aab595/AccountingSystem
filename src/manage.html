@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account system</title>
+    <link rel="stylesheet" href="../public/css/main.css">
+    <link rel="stylesheet" href="../public/css/manage.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="nav">
+                <ul>
+                    <li class="nav-list"><a href="./index.html">Manage Accounts</a></li>
+                    <li class="nav-list"><a href="./manage.html">Manage Transactions</a></li>
+                    <li class="nav-list"><a href="./edit.html">Edit Accounts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <h1>Manage Transactions</h1>
+            <div class="form">
+                <form action="">
+                    <div class="form-content">
+                        <div class="transaction">
+                            <div>
+                                <label for="date-trans">Transaction Date</label>
+                                <input type="date" name="date-trans" class="form-control" id="date-trans">
+                            </div>
+                            <div>
+                                <label for="">Transaction Object</label>
+                                <input type="text" placeholder="Description of transaction" class="form-control">
+                            </div>
+                        </div>
+                        <div class="transaction-details1">
+                            <div>
+                                <label for="code1">Code</label>
+                                <input type="text" name="code1" class="form-control" id="code1">
+                            </div>
+                            <div>
+                                <label for="debit1">Debit</label>
+                                <input type="text" name="debit1" class="form-control" id="debit1">
+                            </div>
+                            <div>
+                                <label for="credit1">Credit</label>
+                                <input type="text" name="credit1" class="form-control" id="credit1">
+                            </div>
+                        </div>
+                        <div class="transaction-details2">
+                            <div>
+                                <label for="code2">Code</label>
+                                <input type="text" name="code2" class="form-control" id="code2">
+                            </div>
+                            <div>
+                                <label for="debit2">Debit</label>
+                                <input type="text" name="debit2" class="form-control" id="debit2">
+                            </div>
+                            <div>
+                                <label for="credit2">Credit</label>
+                                <input type="text" name="credit2" class="form-control" id="credit2">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="addBtn">+</button>
+                </form>
+            </div>
+
+            <div class="main-table">
+                <table class="table">
+                    <thead class="thead"></thead>
+                    <tbody class="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Copyright &copy; <strong>AAB</strong> & <strong>FN</strong> from <strong>MEAN Stack</strong></p>
+    </footer>
+</body>
+</html>

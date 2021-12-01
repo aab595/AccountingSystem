@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account system</title>
+    <link rel="stylesheet" href="../public/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="nav">
+                <ul>
+                    <li class="nav-list"><a href="./index.html">Manage Accounts</a></li>
+                    <li class="nav-list"><a href="./manage.html">Manage Transactions</a></li>
+                    <li class="nav-list"><a href="./edit.html">Edit Accounts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <h1>Edit Accounts</h1>
+            <div class="form">
+                <form action="">
+                    <div class="form-content">
+                        <div>
+                            <label for="">First Date</label>
+                            <input type="date" name="first-date" class="form-control">
+                        </div>
+                        <div>
+                            <label for="">Last Date</label>
+                            <input type="text" name="last-date" class="form-control">
+                        </div>
+                        <div>
+                            <label for="">Account</label>
+                            <select name="class" id="" class="form-control">
+                                <option value="">Reserve</option>
+                                <option value="">Immobilisation</option>
+                                <option value="">Stock</option>
+                                <option value="">Tiers</option>
+                                <option value="">Tiers</option>
+                                <option value="">Trésorerie</option>
+                                <option value="">Trésorerie</option>
+                                <option value="">Charge</option>
+                                <option value="">Produit</option>
+                                <option value="">Produit</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="addBtn">+</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="main-table">
+                <table class="table">
+                    <thead class="thead"></thead>
+                    <tbody class="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Copyright &copy; <strong>AAB</strong> & <strong>FN</strong> from <strong>MEAN Stack</strong></p>
+    </footer>
+</body>
+</html>
