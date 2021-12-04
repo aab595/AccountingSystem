@@ -25,15 +25,15 @@
                     <div class="form-content">
                         <div>
                             <label for="">Code</label>
-                            <input type="text" placeholder="code" class="form-control">
+                            <input type="text" placeholder="code" class="form-control code">
                         </div>
                         <div>
                             <label for="">Label</label>
-                            <input type="text" placeholder="label" class="form-control">
+                            <input type="text" placeholder="label" class="form-control label">
                         </div>
                         <div>
                             <label for="">Class</label>
-                            <select name="class" id="" class="form-control">
+                            <select name="class" id="" class="form-control class">
                                 <option value="">Reserve</option>
                                 <option value="">Immobilisation</option>
                                 <option value="">Stock</option>
@@ -46,15 +46,19 @@
                                 <option value="">Produit</option>
                             </select>
                         </div>
-                        <button type="submit" class="addBtn">+</button>
+                        <button class="addBtn">+</button>
                     </div>
                 </form>
             </div>
 
             <div class="main-table">
                 <table class="table">
-                    <thead class="thead"></thead>
-                    <tbody class="tbody"></tbody>
+                    <thead class="thead">
+                        <th>CODE</th>
+                        <th>LABEL</th>
+                        <th>CLASS</th>
+                    </thead>
+                    <tbody class="tbody" id="tbody"></tbody>
                 </table>
             </div>
         </div>
@@ -62,5 +66,6 @@
     <footer class="footer">
         <p>Copyright &copy; <strong>AAB</strong> & <strong>FN</strong> from <strong>MEAN Stack</strong></p>
     </footer>
+    <script src="../public/js/index.js"></script>
 </body>
 </html>
