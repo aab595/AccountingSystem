@@ -31,13 +31,18 @@
                             </div>
                             <div>
                                 <label for="">Transaction Object</label>
-                                <input type="text" placeholder="Description of transaction" class="form-control">
+                                <input type="text" placeholder="Description of transaction" class="form-control" id="trans-obj">
                             </div>
                         </div>
                         <div class="transaction-details1">
                             <div>
                                 <label for="code1">Code</label>
                                 <input type="text" name="code1" class="form-control" id="code1">
+                                <select name="code1" id="select-code1"></select>
+                            </div>
+                            <div>
+                                <label for="code1">Label</label>
+                                <input type="text" name="label1" class="form-control" id="label1" readonly>
                             </div>
                             <div>
                                 <label for="debit1">Debit</label>
@@ -54,6 +59,10 @@
                                 <input type="text" name="code2" class="form-control" id="code2">
                             </div>
                             <div>
+                                <label for="code1">Label</label>
+                                <input type="text" name="label2" class="form-control" id="label2" readonly>
+                            </div>
+                            <div>
                                 <label for="debit2">Debit</label>
                                 <input type="text" name="debit2" class="form-control" id="debit2">
                             </div>
@@ -63,14 +72,21 @@
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="addBtn">+</button>
+                    <button class="addBtn" id="bouton">+</button>
                 </form>
             </div>
 
             <div class="main-table">
                 <table class="table">
-                    <thead class="thead"></thead>
-                    <tbody class="tbody"></tbody>
+                    <thead class="thead">
+                        <th>Transaction Date</th>
+                        <th>Accounting Code (Débit)</th>
+                        <th>Accounting Code (Crédit)</th>
+                        <th>Transaction Object</th>
+                        <th>Débit</th>
+                        <th>Crédit</th>
+                    </thead>
+                    <tbody class="tbody" id="tbody"></tbody>
                 </table>
             </div>
         </div>
@@ -78,5 +94,6 @@
     <footer class="footer">
         <p>Copyright &copy; <strong>AAB</strong> & <strong>FN</strong> from <strong>MEAN Stack</strong></p>
     </footer>
+    <script src="../public/js/manage.js"></script>
 </body>
 </html>

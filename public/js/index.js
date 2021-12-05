@@ -1,11 +1,11 @@
-const local = JSON.parse(localStorage.getItem("data"));
+const local = JSON.parse(localStorage.getItem("account"));
 
 if (local != null) {
     if (local.code && local.label && local.classe) {
         for (let i = 0; i < local.code.length; i++) {
-            // creer les td
-            var tr1 = document.createElement('tr');
-            tr1.id = `row${i+1}`;
+            // creer les tds
+            var tr = document.createElement('tr');
+            tr.id = `row${i+1}`;
             var td1 = document.createElement('td');
             td1.id = `r${i+1}d1`;
             td1.innerHTML = local.code[i];
@@ -15,10 +15,10 @@ if (local != null) {
             var td3 = document.createElement('td');
             td3.id = `r${i+1}d3`;
             td3.innerHTML = local.classe[i];
-            tr1.appendChild(td1)
-            tr1.appendChild(td2)
-            tr1.appendChild(td3)
-            document.getElementById('tbody').appendChild(tr1);
+            tr.appendChild(td1)
+            tr.appendChild(td2)
+            tr.appendChild(td3)
+            document.getElementById('tbody').appendChild(tr);
         }
     }
 }
@@ -28,23 +28,23 @@ bouton.onclick = () => {
     var new_label = document.getElementById('label').value;
     var new_classe = document.getElementById('classe').value;
 
-    if (localStorage.getItem('data') == null) {
-        const data = {
+    if (localStorage.getItem('account') == null) {
+        const account = {
             code: [],
             label: [],
             classe: []
         }
-        localStorage.setItem("data", JSON.stringify(data));
+        localStorage.setItem("account", JSON.stringify(account));
     }
 
-    var old_data = JSON.parse(localStorage.getItem('data'));
+    var old_account = JSON.parse(localStorage.getItem('account'));
     // s'assurer que les champs sont non vides avant de les stocker
     if (new_code && new_label) {
-        old_data.code.push(new_code);
-        old_data.label.push(new_label);
-        old_data.classe.push(new_classe);
+        old_account.code.push(new_code);
+        old_account.label.push(new_label);
+        old_account.classe.push(new_classe);
     }
 
-    localStorage.setItem('data', JSON.stringify(old_data));
+    localStorage.setItem('account', JSON.stringify(old_account));
     document.location.reload();
 }
