@@ -38,9 +38,12 @@ bouton.onclick = () => {
     }
 
     var old_data = JSON.parse(localStorage.getItem('data'));
-    old_data.code.push(new_code);
-    old_data.label.push(new_label);
-    old_data.classe.push(new_classe);
+    // s'assurer que les champs sont non vides avant de les stocker
+    if (new_code && new_label) {
+        old_data.code.push(new_code);
+        old_data.label.push(new_label);
+        old_data.classe.push(new_classe);
+    }
 
     localStorage.setItem('data', JSON.stringify(old_data));
     document.location.reload();
