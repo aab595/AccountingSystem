@@ -1,4 +1,7 @@
 accountObj = JSON.parse(localStorage.getItem('account'));
+// generer les codes à partir de l'objet account
+
+
 
 const local = JSON.parse(localStorage.getItem("transaction"));
 
