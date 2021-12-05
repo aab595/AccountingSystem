@@ -1,60 +1,47 @@
-let tableHead = document.querySelector(".thead");
-let tableBody = document.querySelector(".tbody");
-let codeInput = document.querySelector('.code');
+const local = JSON.parse(localStorage.getItem("data"));
 
-let addButton = document.querySelector('.addBtn');
-
-// on test le contenu des inputs avant d'ajouter l'element
-let code = document.querySelector('.code');
-let label = document.querySelector('.label');
-let classe = document.querySelector('.class');
-
-addButton.addEventListener('click', createElementTable);
-
-function createElementTable() {
-    var tr = document.createElement('tr');
-    var td1 = document.createElement('td');
-    var tdText1 = document.createTextNode('content[0]')
-    td1.appendChild(tdText1);
-    var td2 = document.createElement('td');
-    var tdText2 = document.createTextNode('content[1]')
-    td2.appendChild(tdText2);
-    var td3 = document.createElement('td');
-    var tdText3 = document.createTextNode('content[2]')
-    td3.appendChild(tdText3);
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    tr.appendChild(td3);
-    document.getElementById("tbody").appendChild(tr);
+if (local != null) {
+    if (local.code && local.label && local.classe) {
+        for (let i = 0; i < local.code.length; i++) {
+            // creer les td
+            var tr1 = document.createElement('tr');
+            tr1.id = `row${i+1}`;
+            var td1 = document.createElement('td');
+            td1.id = `r${i+1}d1`;
+            td1.innerHTML = local.code[i];
+            var td2 = document.createElement('td');
+            td2.id = `r${i+1}d2`;
+            td2.innerHTML = local.label[i];
+            var td3 = document.createElement('td');
+            td3.id = `r${i+1}d3`;
+            td3.innerHTML = local.classe[i];
+            tr1.appendChild(td1)
+            tr1.appendChild(td2)
+            tr1.appendChild(td3)
+            document.getElementById('tbody').appendChild(tr1);
+        }
+    }
 }
 
+bouton.onclick = () => {
+    var new_code = document.getElementById('code').value;
+    var new_label = document.getElementById('label').value;
+    var new_classe = document.getElementById('classe').value;
 
-// addButton.addEventListener('click', () => {
-//     // let languages = ['JS', 'TypeScript', 'Elm', 'Dart', 'Scala'];
+    if (localStorage.getItem('data') == null) {
+        const data = {
+            code: [],
+            label: [],
+            classe: []
+        }
+        localStorage.setItem("data", JSON.stringify(data));
+    }
 
-//     // let fragment = new DocumentFragment();
+    var old_data = JSON.parse(localStorage.getItem('data'));
+    old_data.code.push(new_code);
+    old_data.label.push(new_label);
+    old_data.classe.push(new_classe);
 
-//     // languages.forEach((language) => {
-//     //     let th = document.createElement('th');
-//     //     let 
-//     //     th.innerHTML = language;
-//     //     fragment.appendChild(th);
-//     // })
-
-//     // tableHead.appendChild(fragment);
-//     // createElement(tableHead, "tr", "Code");
-
-//     createElement(tableHead, "th", "Code");
-//     console.log(test);
-//     // createElement(tableHead, "th", "Label");
-//     // createElement(tableHead, "th", "Classe");
-//     // createElement(tableBody, "th", "Classe");
-// });
-
-
-// createElementTable(tableHead, 'tr', 'th', ['Code', 'Label', 'Class'])
-// createElementTable(tableBody, 'tr', 'td', ['C001', 'Label1', 'Class1'])
-// createElementTable(tableBody, 'tr', 'td', ['C001', 'Label1', 'Class1'])
-// createElementTable(tableBody, 'tr', 'td', ['C001', 'Label1', 'Class1'])
-// createElementTable(tableBody, 'tr', 'td', ['C001', 'Label1', 'Class1'])
-// createElementTable(tableBody, 'tr', 'td', ['C001', 'Label1', 'Class1'])
+    localStorage.setItem('data', JSON.stringify(old_data));
+    document.location.reload();
+}
