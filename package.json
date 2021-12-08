@@ -1,0 +1,23 @@
+{
+  "name": "accountingsystem",
+  "version": "1.0.0",
+  "description": "Projet de creation d'un systeme comptable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aab595/AccountingSystem.git"
+  },
+  "author": "AAB & FN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aab595/AccountingSystem/issues"
+  },
+  "homepage": "https://github.com/aab595/AccountingSystem#readme",
+  "devDependencies": {
+    "parcel": "^2.0.1"
+  }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account system</title>
+    <link rel="stylesheet" href="/index.2cd35a65.css">
+    <link rel="stylesheet" href="/manage.1675c7ca.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="nav">
+                <ul>
+                    <li class="nav-list"><a href="/index.html">Manage Accounts</a></li>
+                    <li class="nav-list"><a href="/manage.html">Manage Transactions</a></li>
+                    <li class="nav-list"><a href="/edit.html">Edit Accounts</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <h1>Manage Transactions</h1>
+            <div class="form">
+                <form action="">
+                    <div class="form-content">
+                        <div class="transaction">
+                            <div>
+                                <label for="date-trans">Transaction Date</label>
+                                <input type="date" name="date-trans" class="form-control" id="date-trans">
+                            </div>
+                            <div>
+                                <label for="">Transaction Object</label>
+                                <input type="text" placeholder="Description of transaction" class="form-control" id="trans-obj">
+                            </div>
+                        </div>
+                        <div class="transaction-details1">
+                            <div>
+                                <label for="code1">Code</label>
+                                <select name="code1" id="select-code1" class="form-control"></select>
+                            </div>
+                            <div>
+                                <label for="code1">Label</label>
+                                <input type="text" name="label1" class="form-control" id="label1" readonly="">
+                            </div>
+                            <div>
+                                <label for="debit1">Debit</label>
+                                <input type="text" name="debit1" class="form-control" id="debit1">
+                            </div>
+                            <div>
+                                <label for="credit1">Credit</label>
+                                <input type="text" name="credit1" class="form-control" id="credit1">
+                            </div>
+                        </div>
+                        <div class="transaction-details2">
+                            <div>
+                                <label for="code2">Code</label>
+                                <select name="code2" id="select-code2" class="form-control"></select>
+                            </div>
+                            <div>
+                                <label for="code2">Label</label>
+                                <input type="text" name="label2" class="form-control" id="label2" readonly="">
+                            </div>
+                            <div>
+                                <label for="debit2">Debit</label>
+                                <input type="text" name="debit2" class="form-control" id="debit2">
+                            </div>
+                            <div>
+                                <label for="credit2">Credit</label>
+                                <input type="text" name="credit2" class="form-control" id="credit2">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="addBtn" id="bouton">+</button>
+                </form>
+            </div>
+
+            <div class="main-table">
+                <table class="table">
+                    <thead class="thead">
+                        <th>Transaction Date</th>
+                        <th>Accounting Code (Débit)</th>
+                        <th>Accounting Code (Crédit)</th>
+                        <th>Transaction Object</th>
+                        <th>Débit</th>
+                        <th>Crédit</th>
+                    </thead>
+                    <tbody class="tbody" id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>Copyright &copy; <strong>AAB</strong> & <strong>FN</strong> from <strong>MEAN Stack</strong></p>
+    </footer>
+    <script src="/manage.9667bb94.js"></script>
+</body>
+</html>

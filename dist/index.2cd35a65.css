@@ -1,0 +1,128 @@
+@import "https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 100vh;
+    font-size: 16px;
+    font-family: 'JetBrains Mono', monospace, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    /* background: #ccc; */
+    display: flex;
+    height: calc(100vh - 30px);
+}
+
+.sidebar {
+    padding: 20px;
+    background: #3c7ab745;
+    width: 250px;
+}
+
+.nav {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+
+.nav-list {
+    list-style: none;
+    border: 2px solid;
+    margin: 1px 0;
+    padding: 5px;
+    margin: 25px 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+}
+
+.main {
+    padding: 20px;
+    background: #337ab7;
+    width: calc(100% - 250px);
+}
+
+.main h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.form {
+    background: #cfcfcf;
+    margin: 0 15px;
+    padding: 15px;
+    font-size: .8em;
+    font-weight: bold;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.form-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-control {
+    border-color: #2e6da4;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-family: 'JetBrains Mono', monospace, sans-serif;
+}
+
+.addBtn {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    font-weight: 900;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 5px 20px;
+    font-size: 1.9em;
+    line-height: 1;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main-table {
+    clear: both;
+    background: #cfcfcf;
+    margin: 5px 15px;
+}
+
+.table {
+    width: 100%;
+}
+
+.thead tr > th {
+    border: 2px solid #fff;
+}
+
+.tbody tr {
+    background-color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+.footer {
+    background: #fff;
+    text-align: center;
+    font-size: .8em;
+    height: 30px;
+    padding: 8px 0;
+}
+
+.footer p {
+    font-weight: bold;
+}
+/*# sourceMappingURL=index.2cd35a65.css.map */
